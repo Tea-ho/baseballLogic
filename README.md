@@ -1,8 +1,11 @@
 # baseballLogic
 baseball Game Logic
+
+#### 0. 게임 규칙
 - 규칙1: 숫자 3개의 자리수까지 일치시키면 3Strike로 게임 성공
 - 규칙2: 숫자만 맞출 경우, ball로 힌트 제공 (조건에 1개 부합시: 1ball, 2개 부합시: 2ball, 3개 부합시: 3ball)
 - 규칙3: 숫자와 자리수 모두 맞췄을 경우, Strike로 힌트 제공 (조건에 1개 부합시: 1Strike, 2개 부합시: 2Strike, 3개 부합시: 3Strike)
+- 규칙4: 3Strike를 맞추는데 시도한 횟수 카운팅 됨 (더 적게 카운팅된 사람이 win)
 
 #### 1. 설계 방향
 - SOLID 원칙에 근거하여 클래스 작성
