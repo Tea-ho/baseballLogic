@@ -1,13 +1,13 @@
 package org.example.baseball.function;
 
-import org.example.baseball.inter.InputOutputHandler;
+import inter.InputOutputHandler;
 
 import java.util.Scanner;
 
-public class BaseballGameInputOutputHandler implements InputOutputHandler {
+public class BaseballInputOutputHandler implements InputOutputHandler {
     private Scanner scanner;
 
-    public BaseballGameInputOutputHandler() {
+    public BaseballInputOutputHandler() {
         this.scanner = new Scanner(System.in);
     }
 

@@ -1,9 +1,9 @@
 package org.example.baseball;
 
-import org.example.baseball.function.BaseballGame;
+import org.example.baseball.function.BaseballPlayGame;
 
 public class StartBaseballGame {
     public static void main(String[] args) {
-        BaseballGame.playGame();
+        BaseballPlayGame.playGame();
     }
 }

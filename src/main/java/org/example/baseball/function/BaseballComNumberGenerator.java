@@ -1,10 +1,10 @@
 package org.example.baseball.function;
 
-import org.example.baseball.inter.RandomNumberGenerator;
+import inter.RandomNumberGenerator;
 
 import java.util.Random;
 
-public class BaseballGameComNumberGenerator implements RandomNumberGenerator {
+public class BaseballComNumberGenerator implements RandomNumberGenerator {
     @Override
     public int[] generateRandomNumbers() { // 컴퓨터 번호 3개 무작위 생성 (중복 미허용)
         int[] numbers = new int[3];

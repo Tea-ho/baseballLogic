@@ -1,6 +1,6 @@
 package org.example.baseball.function;
 
-public class BaseballGameTypeCasting {
+public class BaseballTypeCasting {
     // parsingInput 메소드: 문자로 인식된거 숫자로 변환 작업
     protected static int[] parsingInput(String input) {
         // 1. 받을 공간 생성
