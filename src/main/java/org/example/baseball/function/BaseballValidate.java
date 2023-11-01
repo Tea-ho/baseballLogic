@@ -18,8 +18,8 @@ public class BaseballValidate {
     }
 
     // 자리수 체크
-    protected  static boolean checkLength(String input){
-        if (input.length() != 3) {
+    protected static boolean checkLength(String input, int length){
+        if (input.length() != length) {
             return false;
         }
         return true;

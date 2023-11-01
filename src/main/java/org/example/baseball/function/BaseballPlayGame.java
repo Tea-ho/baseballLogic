@@ -29,7 +29,7 @@ public class BaseballPlayGame {
             String input = inputOutputHandler.getInput();
 
             // 5-2. 유효성 검사 처리
-            if ( !BaseballValidate.checkLength(input) || !BaseballValidate.isUnique(input) || !BaseballValidate.checkRange(input) ) {
+            if ( !BaseballValidate.checkLength(input, computerNumbers.length) || !BaseballValidate.isUnique(input) || !BaseballValidate.checkRange(input) ) {
                 inputOutputHandler.printMessage("잘못된 입력: 1부터 9까지의 서로 다른 숫자로 이루어진 3자리 수 입력");
                 continue;
             }
