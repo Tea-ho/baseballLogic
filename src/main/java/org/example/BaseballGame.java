@@ -10,6 +10,7 @@ public class BaseballGame {
     }
 
     // playGame 메소드: 게임 작동부
+    // 리팩토링: 입출력은 우선 인터페이스로 빼자
     public static void playGame() {
 
         // 1. 스캐너 생성
@@ -57,6 +58,7 @@ public class BaseballGame {
     }
 
     // makeRandomNumbers 메소드: 컴퓨터 번호 3개 랜덤 생성
+    // 리팩토링: 상황에 따라 내용 바뀔 수 있으니 interface로 빼자
     public static int[] makeRandomNumbers() {
 
         int[] numbers = new int[3];
