@@ -3,11 +3,11 @@ package org.example.baseball.object;
 import inter.InputOutputHandler;
 
 public class BaseballGame { // 게임 객체는 투수와 타자, 심판, 그리고 조이스틱(입출력)으로 구성되고 각각의 객체는 협력이 불가피한 관계 (최종결과(횟수)는 상태 체크)
-    private BaseballPitcher pitcher; // 투수: 컴퓨터
-    private BaseballBatter batter; // 타자: 사용자
-    private BaseballUmpire umpire; // 심판: 유효성 검사 역할
-    private int attempts; // 횟수: 최종결과
-    private InputOutputHandler inputOutputHandler; // 입출력 장치: 조이스틱
+    private BaseballPitcher pitcher; // 투수: 컴퓨터 (의존성 주입)
+    private BaseballBatter batter; // 타자: 사용자 (의존성 주입)
+    private BaseballUmpire umpire; // 심판: 유효성 검사 역할 (의존성 주입)
+    private int attempts; // 횟수: 최종결과 (상태변수)
+    private InputOutputHandler inputOutputHandler; // 입출력 장치: 조이스틱 (의존성 주입)
 
     public BaseballGame(BaseballPitcher pitcher, BaseballBatter batter, BaseballUmpire umpire, InputOutputHandler inputOutputHandler) {
         this.pitcher = pitcher;
