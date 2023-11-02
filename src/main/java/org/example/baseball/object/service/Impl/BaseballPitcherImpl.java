@@ -7,12 +7,17 @@ import java.util.Random;
 public class BaseballPitcherImpl implements BaseballPitcher {
     @Override
     public int[] throwBall() {
-        // 컴퓨터 번호 3개 무작위 생성 (중복 미허용)
-        int[] numbers = new int[3];
+        int[] numbers = generateRandomNumbers(3, 1, 9);
+        return numbers;
+    }
+
+    // 로직은 숨기고, 게임 규칙 변경되면 숫자만 변경할 수 있도록
+    private int[] generateRandomNumbers(int count, int min, int max) {
+        int[] numbers = new int[count];
         Random random = new Random();
 
-        for (int i = 0; i < 3; i++) {
-            numbers[i] = random.nextInt(9) + 1;
+        for (int i = 0; i < count; i++) {
+            numbers[i] = random.nextInt(max - min + 1) + min;
             for (int j = 0; j < i; j++) {
                 if (numbers[i] == numbers[j]) {
                     i--;
@@ -22,4 +27,6 @@ public class BaseballPitcherImpl implements BaseballPitcher {
         }
         return numbers;
     }
+
+
 }

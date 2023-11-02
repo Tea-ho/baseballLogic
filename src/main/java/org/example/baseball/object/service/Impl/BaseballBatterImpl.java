@@ -2,10 +2,10 @@ package org.example.baseball.object.service.Impl;
 
 import inter.InputOutputHandler;
 import org.example.baseball.object.service.BaseballBatter;
+import org.example.baseball.object.service.Validator;
 
-public class BaseballBatterImpl implements BaseballBatter {
+public class BaseballBatterImpl implements BaseballBatter, Validator<String> {
     private InputOutputHandler inputOutputHandler; // 의존성 주입
-
     public BaseballBatterImpl(InputOutputHandler inputOutputHandler) {
         this.inputOutputHandler = inputOutputHandler;
     }
@@ -26,16 +26,20 @@ public class BaseballBatterImpl implements BaseballBatter {
         return parseBallType(input);
     }
 
-    // validate는 필요에 따라 구현
+    private int[] parseBallType(String input) {
+        int[] numbers = new int[3];
+        for (int i = 0; i < 3; i++) {
+            numbers[i] = input.charAt(i) - '0';
+        }
+        return numbers;
+    }
+
+    @Override
     public boolean validate(String input) {
         return checkLength(input, 3) && isUnique(input) && checkRange(input);
     }
 
-    public int[] parseBallType(String input) {
-        return parsingInput(input);
-    }
-
-    private boolean isUnique(String input) {
+     private boolean isUnique(String input) {
         char[] digits = input.toCharArray();
         for (int i = 0; i < 2; i++) {
             for (int j = i + 1; j < 3; j++) {
@@ -61,13 +65,5 @@ public class BaseballBatterImpl implements BaseballBatter {
             }
         }
         return true;
-    }
-
-    private int[] parsingInput(String input) {
-        int[] numbers = new int[3];
-        for (int i = 0; i < 3; i++) {
-            numbers[i] = input.charAt(i) - '0';
-        }
-        return numbers;
     }
 }
