@@ -1,6 +1,8 @@
 package org.example.baseball.object.service.Impl;
 
 import inter.InputOutputHandler;
+import org.example.baseball.object.dto.BallDto;
+import org.example.baseball.object.dto.ResultDto;
 
 public class BaseballGameImpl {
     private BaseballPitcherImpl pitcher;
@@ -20,18 +22,22 @@ public class BaseballGameImpl {
         int[] comNumbers = pitcher.throwBall();
 
         while (true) {
-            int[] userNumbers = batter.hitBall();
 
+            int[] userNumbers = batter.hitBall();
             if( userNumbers == null){
+                inputOutputHandler.printMessage("잘못된 입력: 1부터 9까지의 서로 다른 숫자로 이루어진 3자리 수 입력");
                 continue;
             }
 
-            if( umpire.judgment(comNumbers, userNumbers) ){
-                inputOutputHandler.printMessage("정답! 시도 횟수: " + umpire.getAttempts());
+            BallDto ballDto = new BallDto( comNumbers, userNumbers );
+            ResultDto result = umpire.judgment(ballDto);
+
+            if( result.isResult() ){
+                inputOutputHandler.printMessage("정답! 시도 횟수: " + result.getAttempts());
                 inputOutputHandler.closeScanner();
                 break;
             } else{
-                inputOutputHandler.printMessage("결과: " + umpire.getStrikeCount() + " 스트라이크, " + umpire.getBallCount()+ " 볼");
+                inputOutputHandler.printMessage("결과: " + result.getStrikeCount() + " 스트라이크, " + result.getBallCount()+ " 볼");
             }
         }
     }

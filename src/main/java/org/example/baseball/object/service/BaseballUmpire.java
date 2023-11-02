@@ -1,5 +1,8 @@
 package org.example.baseball.object.service;
 
+import org.example.baseball.object.dto.BallDto;
+import org.example.baseball.object.dto.ResultDto;
+
 public interface BaseballUmpire {
-    boolean judgment(int[] comNumbers, int[] userNumbers);
+    ResultDto judgment(BallDto ballDto);
 }
