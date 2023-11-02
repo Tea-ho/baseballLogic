@@ -47,7 +47,7 @@ baseball Game Logic
   has-a
   1) BaseballGame 객체가 BaseballPitcher, BaseballBatter, BaseballUmpire, InputOutputHandler 객체를 포함
   2) BaseballBatter 객체가 InputOutputHandler를 포함
-- ISP(Interface Segregation Principle): 입출력 부분과 난수 생성 부분에 적용
+- ISP(Interface Segregation Principle): 입출력 부분 적용
 - DIP(Dependency Inversion Principle): 의존성 주입(LSP의 has-a관계와 이어지는거 같음)
 - 결론: SOLID 관점에서 해석능력이 아직도 부족함. 방향성 검토 후 SOLID 개념잡은 후 재평가 및 코드수정이 필요함.
 
