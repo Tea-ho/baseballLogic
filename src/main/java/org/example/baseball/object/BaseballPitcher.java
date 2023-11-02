@@ -5,11 +5,11 @@ import java.util.Random;
 public class BaseballPitcher {
     private int[] numbers;
 
-    public int[] getNumbers() {
+    public int[] getBallNumbers() {
         return numbers;
     }
 
-    public void generateRandomNumbers() {
+    public void throwBallNumbers() {
         // 컴퓨터 번호 3개 무작위 생성 (중복 미허용)
         numbers = new int[3];
         Random random = new Random();

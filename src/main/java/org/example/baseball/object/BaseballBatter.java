@@ -9,7 +9,7 @@ public class BaseballBatter {
         this.inputOutputHandler = inputOutputHandler;
     }
 
-    public String getInput() {
+    public String hit() {
         inputOutputHandler.printMessage("3자리 숫자를 입력: ");
         return inputOutputHandler.getInput();
     }

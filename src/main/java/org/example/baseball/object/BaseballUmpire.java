@@ -5,15 +5,15 @@ import org.example.baseball.function.BaseballTypeCasting;
 import org.example.baseball.function.BaseballValidate;
 
 public class BaseballUmpire {
-    public boolean validateInput(String input) {
+    public boolean validate(String input) {
         return BaseballValidate.checkLength(input, 3) && BaseballValidate.isUnique(input) && BaseballValidate.checkRange(input);
     }
 
-    public int[] parseInput(String input) {
+    public int[] parseBallType(String input) {
         return BaseballTypeCasting.parsingInput(input);
     }
 
-    public int[] compareNumbers(int[] computerNumbers, int[] userNumbers) {
+    public int[] judgment(int[] computerNumbers, int[] userNumbers) {
         return BaseballResultHandler.compareNumbers(computerNumbers, userNumbers);
     }
 }
