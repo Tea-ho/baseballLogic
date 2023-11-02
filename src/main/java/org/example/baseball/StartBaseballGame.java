@@ -20,7 +20,5 @@ public class StartBaseballGame {
 
         BaseballGame game = new BaseballGame(pitcher, batter, umpire, inputOutputHandler);
         game.playGame();
-
-        inputOutputHandler.closeScanner();
     }
 }

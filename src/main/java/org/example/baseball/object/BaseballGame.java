@@ -43,6 +43,7 @@ public class BaseballGame { // 게임 객체는 투수와 타자, 심판, 그리
             // 전광판 객체로 하나 빼야되나..
             if (result[0] == 3) {
                 inputOutputHandler.printMessage("정답! 시도 횟수: " + attempts); // 최종 결과
+                inputOutputHandler.closeScanner();
                 break;
             } else {
                 inputOutputHandler.printMessage("결과: " + result[0] + " 스트라이크, " + result[1] + " 볼"); // 힌트 안내
