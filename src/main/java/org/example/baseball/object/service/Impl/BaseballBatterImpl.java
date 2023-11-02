@@ -4,8 +4,8 @@ import inter.InputOutputHandler;
 import org.example.baseball.object.service.BaseballBatter;
 
 public class BaseballBatterImpl implements BaseballBatter {
-    private InputOutputHandler inputOutputHandler; // 의존성 주입
-    private BaseballValidatorImpl validator; // 의존성 주입
+    private InputOutputHandler inputOutputHandler;
+    private BaseballValidatorImpl validator;
     public BaseballBatterImpl(InputOutputHandler inputOutputHandler) {
         this.inputOutputHandler = inputOutputHandler;
     }
