@@ -27,6 +27,4 @@ public class BaseballPitcherImpl implements BaseballPitcher {
         }
         return numbers;
     }
-
-
 }
