@@ -8,6 +8,13 @@ public class BaseballValidatorImpl implements Validator<String> {
         return checkLength(input, 3) && isUnique(input) && checkRange(input);
     }
 
+    private boolean checkLength(String input, int length){ // 길이 조건만 바뀌면 인수 변경해주면됨
+        if (input.length() != length) {
+            return false;
+        }
+        return true;
+    }
+
     private boolean isUnique(String input) {
         char[] digits = input.toCharArray();
         for (int i = 0; i < 2; i++) {
@@ -16,13 +23,6 @@ public class BaseballValidatorImpl implements Validator<String> {
                     return false;
                 }
             }
-        }
-        return true;
-    }
-
-    private boolean checkLength(String input, int length){
-        if (input.length() != length) {
-            return false;
         }
         return true;
     }
