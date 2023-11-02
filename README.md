@@ -31,7 +31,7 @@ baseball Game Logic
 
 #### 4. 2차 설계 방향
 - 객체 지향적으로 코드 수정
-- 게임이라는 객체는 투수, 타자, 심판, 결과, 조이스틱의 객체로 구성됨
+- 게임이라는 객체는 투수, 타자, 심판, 조이스틱의 객체로 구성됨
 - 투수, 타자, 심판, 조이스틱이 각자의 역할을 수행하며 게임이라는 객체가 형성됨 (필수적 협력관계)
 - 최종 결과 판독을 위해 횟수 체크를 위한 변수 이용함
 - 투수: 컴퓨터로 난수로 3개의 숫자를 생성함
@@ -43,8 +43,8 @@ baseball Game Logic
 - SRP(Single Responsibility Principle): 1메서드 = 1기능 ok
 - OCP(Open-Closed Principle): 입출력 부분 적용
 - LSP(Liskov Substitution Principle)
-  is-a: x (상속관계 없음)
-  has-a
+  - is-a: x (상속관계 없음)
+  - has-a
   1) BaseballGame 객체가 BaseballPitcher, BaseballBatter, BaseballUmpire, InputOutputHandler 객체를 포함
   2) BaseballBatter 객체가 InputOutputHandler를 포함
 - ISP(Interface Segregation Principle): 입출력 부분 적용
