@@ -3,7 +3,7 @@ package org.example.baseball.function;
 public class BaseballValidate {
     
     // 기능: 입력받은 수에서 중복된 수 없는지 검사
-    protected static boolean isUnique(String input) {
+    public static boolean isUnique(String input) {
         // 1. 배열 생성 후 초기화
         char[] digits = input.toCharArray();
         // 2. 중복 검사
@@ -18,7 +18,7 @@ public class BaseballValidate {
     }
 
     // 자리수 체크
-    protected static boolean checkLength(String input, int length){
+    public static boolean checkLength(String input, int length){
         if (input.length() != length) {
             return false;
         }
@@ -26,7 +26,7 @@ public class BaseballValidate {
     }
 
     // 입력값 범위 체크 (범위: 1~9)
-    protected static boolean checkRange(String input){
+    public static boolean checkRange(String input){
         // 2. 1~9 사이 확인
         for (char digit : input.toCharArray()) {
             if ( digit < '1' || digit > '9' ) {

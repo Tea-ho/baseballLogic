@@ -2,7 +2,7 @@ package org.example.baseball.function;
 
 public class BaseballResultHandler {
     // compareNumbers 메소드: 결과 비교
-    protected static int[] compareNumbers(int[] computerNumbers, int[] userNumbers) {
+    public static int[] compareNumbers(int[] computerNumbers, int[] userNumbers) {
         // 1. 결과 담을 공간: index 0 - 스트라이크, 1 - 볼
         int[] result = new int[2];
 
