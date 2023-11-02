@@ -1,17 +1,14 @@
-package org.example.baseball.object;
+package org.example.baseball.object.service.Impl;
+
+import org.example.baseball.object.service.BaseballPitcher;
 
 import java.util.Random;
 
-public class BaseballPitcher {
-    private int[] numbers;
-
-    public int[] getBallNumbers() {
-        return numbers;
-    }
-
-    public void throwBallNumbers() {
+public class BaseballPitcherImpl implements BaseballPitcher {
+    @Override
+    public int[] throwBall() {
         // 컴퓨터 번호 3개 무작위 생성 (중복 미허용)
-        numbers = new int[3];
+        int[] numbers = new int[3];
         Random random = new Random();
 
         for (int i = 0; i < 3; i++) {
@@ -23,5 +20,6 @@ public class BaseballPitcher {
                 }
             }
         }
+        return numbers;
     }
 }
