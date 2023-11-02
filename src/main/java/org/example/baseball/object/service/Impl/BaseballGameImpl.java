@@ -37,7 +37,7 @@ public class BaseballGameImpl {
                 inputOutputHandler.closeScanner();
                 break;
             } else{
-                inputOutputHandler.printMessage("결과: " + result.getStrikeCount() + " 스트라이크, " + result.getBallCount()+ " 볼");
+                inputOutputHandler.printMessage("결과: " + result.getCountStrikes() + " 스트라이크, " + result.getCountBalls()+ " 볼");
             }
         }
     }

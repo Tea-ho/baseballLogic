@@ -7,32 +7,32 @@ public class BaseballUmpireImpl implements BaseballUmpire {
     private int attempts;
 
     public ResultDto judgment(BallDto ballDto) {
-        int strikeCount = countStrikes(ballDto);
-        int ballCount = countBalls(ballDto);
+        int countStrikes = countStrikes(ballDto);
+        int countBalls = countBalls(ballDto);
         attempts++;
-        return new ResultDto(strikeCount, ballCount, attempts);
+        return new ResultDto(countStrikes, countBalls, attempts);
     }
 
     private int countStrikes(BallDto ballDto) {
-        int strikeCount = 0;
+        int countStrikes = 0;
         for (int i = 0; i < 3; i++) {
             if (ballDto.getComNumbers()[i] == ballDto.getUserNumbers()[i]) {
-                strikeCount++;
+                countStrikes++;
             }
         }
-        return strikeCount;
+        return countStrikes;
     }
 
     private int countBalls(BallDto ballDto) {
-        int ballCount = 0;
+        int countBalls = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (ballDto.getComNumbers()[i] == ballDto.getUserNumbers()[j] && i != j) {
-                    ballCount++;
+                    countBalls++;
                 }
             }
         }
-        return ballCount;
+        return countBalls;
     }
 }
 
