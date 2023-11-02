@@ -40,8 +40,8 @@ baseball Game Logic
 
 #### 5. 2차 자체 평가
 - 로직 정상 작동 수행 확인 완료
-- SRP(Single Responsibility Principle): 1메서드 = 1기능 ok.. 
-- OCP(Open-Closed Principle): 입출력 부분에 적용
+- SRP(Single Responsibility Principle): 1메서드 = 1기능 ok
+- OCP(Open-Closed Principle): 입출력 부분 적용
 - LSP(Liskov Substitution Principle)
   is-a: x (상속관계 없음)
   has-a
