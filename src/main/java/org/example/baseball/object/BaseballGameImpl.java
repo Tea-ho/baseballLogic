@@ -1,9 +1,12 @@
-package org.example.baseball.object.service.Impl;
+package org.example.baseball.object;
 
 import inter.InputOutputHandler;
 import org.example.baseball.object.dto.BallDto;
 import org.example.baseball.object.dto.ResultDto;
 import org.example.baseball.object.dto.RuleDto;
+import org.example.baseball.object.service.Impl.BaseballBatterImpl;
+import org.example.baseball.object.service.Impl.BaseballPitcherImpl;
+import org.example.baseball.object.service.Impl.BaseballUmpireImpl;
 
 public class BaseballGameImpl {
     private BaseballPitcherImpl pitcher;

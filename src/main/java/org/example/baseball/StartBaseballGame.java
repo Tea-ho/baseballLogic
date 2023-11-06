@@ -3,7 +3,7 @@ package org.example.baseball;
 import inter.InputOutputHandler;
 import org.example.baseball.function.BaseballInputOutputHandler;
 import org.example.baseball.object.service.Impl.BaseballBatterImpl;
-import org.example.baseball.object.service.Impl.BaseballGameImpl;
+import org.example.baseball.object.BaseballGameImpl;
 import org.example.baseball.object.service.Impl.BaseballPitcherImpl;
 import org.example.baseball.object.service.Impl.BaseballUmpireImpl;
 
