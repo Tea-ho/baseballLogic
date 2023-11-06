@@ -1,13 +1,14 @@
 package org.example.baseball.object.service.Impl;
 
+import org.example.baseball.object.dto.RuleDto;
 import org.example.baseball.object.service.BaseballPitcher;
 
 import java.util.Random;
 
-public class BaseballPitcherImpl implements BaseballPitcher {
+public class BaseballPitcherImpl implements BaseballPitcher<RuleDto> {
     @Override
-    public int[] throwBall() {
-        int[] numbers = generateRandomNumbers(3, 1, 9);
+    public int[] throwBall(RuleDto rule) {
+        int[] numbers = generateRandomNumbers(rule.getRuleNumbers(), 1, 9);
         return numbers;
     }
 

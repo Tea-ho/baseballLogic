@@ -3,6 +3,7 @@ package org.example.baseball.object.service.Impl;
 import inter.InputOutputHandler;
 import org.example.baseball.object.dto.BallDto;
 import org.example.baseball.object.dto.ResultDto;
+import org.example.baseball.object.dto.RuleDto;
 
 public class BaseballGameImpl {
     private BaseballPitcherImpl pitcher;
@@ -19,11 +20,12 @@ public class BaseballGameImpl {
 
     public void playGame() {
         inputOutputHandler.printMessage("숫자 야구 게임 스타트, 1부터 9까지의 서로 다른 숫자로 이루어진 3자리 수 맞추기 게임");
-        int[] comNumbers = pitcher.throwBall();
+        RuleDto rule = new RuleDto(3);
+        int[] comNumbers = pitcher.throwBall(rule);
 
         while (true) {
 
-            int[] userNumbers = batter.hitBall();
+            int[] userNumbers = batter.hitBall(rule);
             if( userNumbers == null){
                 inputOutputHandler.printMessage("잘못된 입력: 1부터 9까지의 서로 다른 숫자로 이루어진 3자리 수 입력");
                 continue;
