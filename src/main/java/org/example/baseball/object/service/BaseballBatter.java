@@ -1,5 +1,7 @@
 package org.example.baseball.object.service;
 
-public interface BaseballBatter<T> {
-    int[] hitBall(T rule);
+import org.example.baseball.object.dto.RuleDto;
+
+public interface BaseballBatter {
+    int[] hitBall(RuleDto rule);
 }

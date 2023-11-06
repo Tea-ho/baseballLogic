@@ -4,7 +4,7 @@ import inter.InputOutputHandler;
 import org.example.baseball.object.dto.RuleDto;
 import org.example.baseball.object.service.BaseballBatter;
 
-public class BaseballBatterImpl implements BaseballBatter<RuleDto> {
+public class BaseballBatterImpl implements BaseballBatter {
     private InputOutputHandler inputOutputHandler;
     private BaseballValidatorImpl validator;
     public BaseballBatterImpl(InputOutputHandler inputOutputHandler) {
